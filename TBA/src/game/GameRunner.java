@@ -26,7 +26,7 @@ public class GameRunner
         }
         
         Board escmap = new Board(map);
-        System.out.println("Welcome to Escape From Prison." + "\nIn order to win you must find the alarm room and silence the alarm" 
+        System.out.println("Welcome to Escape From Prison." + "\nIn order to win you must find the alarm room and silence the alarm" + "." 
 				+ "\nThen you have to find the key and move to the opposite side of the board."
 				+ "\nYou begin with 100 energy each move takes 5 energy" + "."
 				+ "\nMove at your own risk.");
@@ -42,11 +42,10 @@ public class GameRunner
         {
             escmap.printMap();
             int move = Player1.chooseMove();
+            Utilities.movePlayer(escmap, player1,move);	
             	
-            	
-            	in.close();            
+            in.close();            
         }
         
     }
-	
 }

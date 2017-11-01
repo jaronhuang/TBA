@@ -5,12 +5,16 @@ import java.util.Scanner;
 public class Player1 implements Person
 {
 	private int energy;
-	private String name;
+	private static String name;
 	private int positionX;
 	private int positionY;
 	private int location;
 	public static int counter = 0;
 	
+	/** 
+	 * Player1 constructor
+	 * @param name - Takes in the name of the player.
+	 */
 	public Player1(String name)
 	{
 		this.name = name;
@@ -27,7 +31,7 @@ public class Player1 implements Person
 		return energy;
 	}
 	
-	public String getName()
+	public static String getName()
 	{
 		return name;
 	}
@@ -101,4 +105,8 @@ public class Player1 implements Person
 		System.out.print("[ P ]");
 	}
 	
+	public void printLocation()
+	{
+		
+	}
 }

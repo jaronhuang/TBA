@@ -4,32 +4,36 @@ import people.Player1;
 
 public class Utilities 
 {
-	if (move == 2) 
+	Player1 player1 = new Player1(Player1.getName());
+	public static void movePlayer(Board escmap, Player1 player1, int move) 
 	{
-		if (player1.getPositionY()  > 0) 
+		if (move == 2) //n
 		{
-			player1.setPosition(player1.getPositionX(), player1.getPositionY()-1);   
-		}
-	} 
-	else if (move == 1) 
-	{
-		if (player1.getPositionX() > 0) 
+			if (player1.getPositionY()  > 0) 
+			{
+				player1.setPosition(player1.getPositionX(), player1.getPositionY()-1);   
+			}
+		} 
+		else if (move == 1) //w
 		{
-			player1.setPosition(player1.getPositionX()-1, player1.getPositionY());
-		}
-	} 
-	else if (move == -2) 
-	{		
-		if (player1.getPositionY() < 0)
+			if (player1.getPositionX() > 0) 
+			{
+				player1.setPosition(player1.getPositionX()-1, player1.getPositionY());
+			}
+		} 
+		else if (move == -2) //s
+		{		
+			if (player1.getPositionY() > 5)
+			{
+				player1.setPosition(player1.getPositionX(), player1.getPositionY()+1);    	
+			}
+		} 
+		else if (move == -1) //e
 		{
-			player1.setPosition(player1.getPositionX(), player1.getPositionY()+1);    	
-		}
-	} 
-	else if (move == -1) 
-	{
-		if (player1.getPositionX() < 0) 
-		{
-			player1.setPosition(player1.getPositionX()+1, player1.getPositionY());
+			if (player1.getPositionX() > 5) 
+			{
+				player1.setPosition(player1.getPositionX()+1, player1.getPositionY());
+			}
 		}
 	}
 }
