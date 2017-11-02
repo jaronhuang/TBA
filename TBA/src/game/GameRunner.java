@@ -43,9 +43,9 @@ public class GameRunner
             escmap.printMap();
             int move = Player1.chooseMove();
             Utilities.movePlayer(escmap, player1,move);	
-            	
-            in.close();            
+            	      
         }
+        in.close();      
         
     }
 }

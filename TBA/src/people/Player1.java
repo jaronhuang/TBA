@@ -99,14 +99,9 @@ public class Player1 implements Person
 		this.location = x + y;
 		
 	}
-
+	
 	public void printOut() 
 	{
-		System.out.print("[ P ]");
-	}
-	
-	public void printLocation()
-	{
-		
+		System.out.print("[ P ]");	
 	}
 }
