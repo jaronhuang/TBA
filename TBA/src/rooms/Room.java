@@ -37,15 +37,6 @@ public abstract class Room
 		return index;
 	}
 	
-	public boolean Located(Room room, Player1 player1)
-	{
-		if (room.getX() == player1.getPositionX() && room.getY() == player1.getPositionY())
-		{
-			return true;
-		}
-		return false;
-	}
-	
 	public abstract void print();
 	
 	
