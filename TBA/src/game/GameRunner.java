@@ -5,7 +5,6 @@ import java.util.Scanner;
 import board.Board;
 import people.Person;
 import people.Player1;
-import rooms.Hallway;
 import rooms.Room;
 
 public class GameRunner 
@@ -20,8 +19,6 @@ public class GameRunner
         	{
         		boolean[] doors = {true,true,true,true};
 	            Person[] person = {};
-
-	            row[i] = new Hallway(i, j);
         	}
         }
         
