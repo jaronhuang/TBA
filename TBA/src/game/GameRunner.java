@@ -43,7 +43,16 @@ public class GameRunner
             escmap.printMap();
             int move = Player1.chooseMove();
             Utilities.movePlayer(escmap, player1,move);	
-            	      
+            
+            if ((player1.getPositionX() == 4) && (player1.getPositionY() == 4))
+            {
+            	gameOn = false;
+            	//add if statement to check if alarm is silenced + key is found.
+            	//System.out.println("Congrats! You're free, but now on FBI's most wanted list");
+            	//else
+            	//System.out.println("You've failed. Into the hole you go.");
+            }
+            	
         }
         in.close();      
         

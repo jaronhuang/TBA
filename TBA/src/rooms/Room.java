@@ -13,7 +13,6 @@ public abstract class Room
 		this.x = x;
 		this.y = y;
 		this.explored = false;
-		this.location = false;
 	}
 	
 	public int getX()
@@ -38,8 +37,10 @@ public abstract class Room
 	
 	public void print()
 	{
+		
 		if (this.location)
 		{
+			
 			System.out.println("[ P ]");
 		}
 		else if (this.explored)

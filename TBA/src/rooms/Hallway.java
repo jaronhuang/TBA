@@ -11,8 +11,6 @@ public class Hallway extends Room
 		this.location = false;
 	}
 	
-	Player1 player1 = new Player1(Player1.getName());
-	
 	public void print() 
 	{
 		if (this.location)
