@@ -61,19 +61,14 @@ public class Player1 implements Person
 		return 0;
 	}
 	
-	public int getLocation() 
-	{
-		return location;
-	}
-	
 	public void setLocation(int location) 
 	{
 		this.location = location;
 	}
 	
-	public int getPositionX() 
+	public int getLocation() 
 	{
-		return positionX;
+		return location;
 	}
 	
 	public void setPositionX(int positionX) 
@@ -81,13 +76,19 @@ public class Player1 implements Person
 		this.positionX = positionX;
 	}
 	
-	public int getPositionY() 
+	public int getPositionX() 
 	{
-		return positionY;
+		return positionX;
 	}
+	
 	public void setPositionY(int positionY) 
 	{
 		this.positionY = positionY;
+	}
+	
+	public int getPositionY() 
+	{
+		return positionY;
 	}
 	
 	public void setPosition(int x, int y) 
@@ -98,10 +99,5 @@ public class Player1 implements Person
 		
 		this.location = x + y;
 		
-	}
-	
-	public void printOut() 
-	{
-		System.out.print("[ P ]");	
 	}
 }

@@ -30,11 +30,6 @@ public class Board
 	    {
 	        return escmap;
 	    }
-
-	    public void setEscmap(Room[][] escmap) 
-	    {
-	        this.escmap = escmap;
-	    }
 	    
 	    public Player1 getPlayer() 
 	    {
