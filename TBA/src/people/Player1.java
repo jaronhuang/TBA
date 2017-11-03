@@ -61,16 +61,6 @@ public class Player1 implements Person
 		return 0;
 	}
 	
-	public void setLocation(int location) 
-	{
-		this.location = location;
-	}
-	
-	public int getLocation() 
-	{
-		return location;
-	}
-	
 	public void setPositionX(int positionX) 
 	{
 		this.positionX = positionX;
@@ -96,8 +86,11 @@ public class Player1 implements Person
 		
 		this.setPositionX(x);
 		this.setPositionY(y);
-		
 		this.location = x + y;
-		
+	}
+	
+	public int getLocation() 
+	{
+		return location;
 	}
 }

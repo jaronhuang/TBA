@@ -1,5 +1,7 @@
 package rooms;
 
+import people.Player1;
+
 public abstract class Room 
 {
 	public boolean explored;
@@ -25,9 +27,9 @@ public abstract class Room
     	return y;
     }
 	
-	public void setIndex(int index) 
+	public void setIndex() 
 	{
-		this.index = index;
+		this.index = getX() + getY();
 	}
 	
 	public int getIndex() 
@@ -35,10 +37,18 @@ public abstract class Room
 		return index;
 	}
 	
+	public boolean Located(Room room, Player1 player1)
+	{
+		if (room.getX() == player1.getPositionX() && room.getY() == player1.getPositionY())
+		{
+			return true;
+		}
+		return false;
+	}
+	
 	public void print()
 	{
-		
-		if (this.location)
+		if (Located())
 		{
 			
 			System.out.println("[ P ]");
