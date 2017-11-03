@@ -49,6 +49,11 @@ public class GameRunner
             	//else
             	//System.out.println("You've failed. Into the hole you go.");
             }
+            if (player1.calcEnergy() == 0)
+            {
+            	gameOn = false;
+            	System.out.println("You ran out of energy and was found before you escaped.");
+            }
             	
         }
         in.close();      

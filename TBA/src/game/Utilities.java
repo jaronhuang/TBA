@@ -23,14 +23,14 @@ public class Utilities
 		} 
 		else if (move == -2) //s
 		{		
-			if (player1.getPositionY() > 5)
+			if (player1.getPositionY() > 4)
 			{
 				player1.setPosition(player1.getPositionX(), player1.getPositionY()+1);    	
 			}
 		} 
 		else if (move == -1) //e
 		{
-			if (player1.getPositionX() > 5) 
+			if (player1.getPositionX() > 4) 
 			{
 				player1.setPosition(player1.getPositionX()+1, player1.getPositionY());
 			}

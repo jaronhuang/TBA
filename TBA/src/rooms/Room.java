@@ -46,20 +46,7 @@ public abstract class Room
 		return false;
 	}
 	
-	public void print()
-	{
-		if (Located())
-		{
-			
-			System.out.println("[ P ]");
-		}
-		else if (this.explored)
-	    {
-			System.out.print("[ E ]");
-	    }
-	    else
-	    {
-	        System.out.print("[   ]");
-	    }
-	}
+	public abstract void print();
+	
+	
 }

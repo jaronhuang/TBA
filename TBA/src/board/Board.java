@@ -16,15 +16,20 @@ public class Board
 
 	    public void printMap()
 	    {
-	    	for(Room[] row : escmap)
-	        {
-	    		for (Room room : row)
-	            	{
-	            		room.print();
-	            	}
-	           
-	            System.out.println();
-	        }
+	    	for (int i = 0; i < escmap.length; i++)
+	    	{
+	    		for (int j = 0; j < escmap[i].length; j++)
+	    		{
+	    			if(i == player.getPositionX()&&j==player.getPositionY())
+	    			{
+	    				System.out.print("[ P ]");
+	    			}
+	    			else
+	    			{
+	            		escmap[i][j].print();
+	    			}
+	    		}
+	    	}
 	    }
 	    public Room[][] getEscmap() 
 	    {
