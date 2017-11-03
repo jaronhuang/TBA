@@ -39,5 +39,4 @@ public abstract class Room
 	
 	public abstract void print();
 	
-	
 }

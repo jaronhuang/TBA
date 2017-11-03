@@ -20,7 +20,7 @@ public class Board
 	    	{
 	    		for (int j = 0; j < escmap[i].length; j++)
 	    		{
-	    			if(i == player.getPositionX()&&j==player.getPositionY())
+	    			if(i == player.getPositionX() && j == player.getPositionY())
 	    			{
 	    				System.out.print("[ P ]");
 	    			}
