@@ -102,6 +102,6 @@ public class Player1 implements Person
 	
 	public void printOut() 
 	{
-		System.out.print("[ ]");	
+		System.out.print("[ P ]");	
 	}
 }

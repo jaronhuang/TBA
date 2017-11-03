@@ -3,7 +3,7 @@ package rooms;
 public abstract class Room 
 {
 	public boolean explored;
-	public boolean inRoom;
+	public boolean location;
 	private int x;
 	private int y;
 	private int index;
@@ -13,6 +13,7 @@ public abstract class Room
 		this.x = x;
 		this.y = y;
 		this.explored = false;
+		this.location = false;
 	}
 	
 	public int getX()
@@ -35,11 +36,9 @@ public abstract class Room
 		return index;
 	}
 	
-	public abstract void print();
-	
-	public void print(boolean inRoom)
+	public void print()
 	{
-		if (inRoom = true)
+		if (this.location)
 		{
 			System.out.println("[ P ]");
 		}
