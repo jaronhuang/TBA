@@ -55,7 +55,7 @@ public class GameRunner
             escmap.printMap(player1);
             
             int move = Player1.chooseMove();
-            Utilities.movePlayer(escmap, player1,move);	
+            Utilities.movePlayer(player1, move);	
             
             if ((player1.getPositionX() == randx) && player1.getPositionY() == randy)
             {

@@ -10,32 +10,38 @@ public class alarmRoom extends Room
 	public static boolean silenced;
 	private int x;
 	private int y;
+	/**
+	 * keyRoom constructor
+	 * @param x keyRoom x-coordinate
+	 * @param y keyRoom y-coordinate
+	 */
 	public alarmRoom(int x, int y) 
 	{
 		super(x, y);
 		this.silenced = false;
 	}
-	
-	public int setX(int x)
-	{
-		return this.x = x;
-	}
-	
-	public int setY(int y)
-	{
-		return this.y = y;
-	}
 
+	/**
+	 * getX gets the location variable x
+	 * @return local variable x
+	 */
 	public int getX()
     {
     	return x;
     }
 	
+	/**
+	 * getY gets the location variable y
+	 * @return local variable y
+	 */
 	public int getY()
     {
     	return y;
     }
-
+	
+	/**
+	 * Prints out alarmRoom 
+	 */
 	@Override
 	public void print() 
 	{

@@ -16,7 +16,7 @@ public class Board
 	 
 	 /**
 	  * Board constructor 
-	  * @param Room[][] map 
+	  * @param Room[][] escmap 
 	  */
 	 public Board(Room[][] escmap)
 	 {
@@ -24,7 +24,8 @@ public class Board
 	 }
 
 	 /**
-	  * Prints the board
+	  * printMap Prints the board
+	  * @param player the constructed player of the game
 	  */
 	 public void printMap(Player1 player)
 	 {
@@ -43,16 +44,29 @@ public class Board
 	    	}
 	    }
 	 }
+	 
+	 /**
+	  * getEscmap gets the local variable escmap
+	  * @return returns local variable escmap
+	  */
 	 public Room[][] getEscmap() 
 	 {
 		 return escmap;
 	 }
-	    
+	 
+	 /**
+	  * getPlayer gets the local variable player
+	  * @return returns local variable player
+	  */
 	 public Player1 getPlayer() 
 	 {
 		 return player;
 	 }
-
+	 
+	 /**
+	  * setPlayer takes in parameter player and sets it to local variable player
+	  * @param player the constructed player of the game
+	  */
 	 public void setPlayer(Player1 player) 
 	 {
 		 this.player = player;
