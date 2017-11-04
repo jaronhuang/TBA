@@ -1,12 +1,20 @@
 package game;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import board.Board;
 import people.Person;
 import people.Player1;
 import rooms.Room;
+import rooms.alarmRoom;
+import rooms.keyRoom;
 
+/**
+ * Text Based Adventure
+ * @author Jaron Huang
+ * 11/3/17
+*/
 public class GameRunner 
 {
 	public static void main (String[] args)
@@ -15,11 +23,6 @@ public class GameRunner
         for (int j = 0; j<map.length; j++)
         {
         	Room[] row = map[j];
-        	for (int i = 0; i<row.length;i++)
-        	{
-        		boolean[] doors = {true,true,true,true};
-	            Person[] person = {};
-        	}
         }
         
         Board escmap = new Board(map);
@@ -35,19 +38,46 @@ public class GameRunner
         escmap.setPlayer(player1);
         System.out.println("You are now in prison, " + pName + "." + "\nTry and escape." );
         boolean gameOn = true;
+        int randx = (int)(Math.random() * 5);
+        int randy = (int)(Math.random() * 5);
+        int randxk = (int)(Math.random() * 5);
+        if (randxk == randx)
+        {
+        	randxk = (int)(Math.random() * 5);
+        }
+        int randyk = (int)(Math.random() * 5);
+        if (randyk == randy)
+        {
+        	randyk = (int)(Math.random() * 5);
+        }
         while(gameOn)
         {
-            escmap.printMap();
+            escmap.printMap(player1);
+            
             int move = Player1.chooseMove();
             Utilities.movePlayer(escmap, player1,move);	
+            
+            if ((player1.getPositionX() == randx) && player1.getPositionY() == randy)
+            {
+            	alarmRoom.silenced = true;
+            }
+            
+            if ((player1.getPositionX() == randxk) && player1.getPositionY() == randyk)
+            {
+            	keyRoom.found = true;
+            }
             
             if ((player1.getPositionX() == 4) && (player1.getPositionY() == 4))
             {
             	gameOn = false;
-            	//add if statement to check if alarm is silenced + key is found.
-            	//System.out.println("Congrats! You're free, but now on FBI's most wanted list");
-            	//else
-            	//System.out.println("You've failed. Into the hole you go.");
+            	if (alarmRoom.silenced && keyRoom.found)
+            	{
+            		System.out.println("Congrats! You're free, but now on FBI's most wanted list");
+            	}
+            	else
+            	{
+            		System.out.println("You've failed. Into the hole you go.");
+            	}
             }
             if (player1.calcEnergy() == 0)
             {

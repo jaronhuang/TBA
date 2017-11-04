@@ -1,7 +1,10 @@
 package rooms;
 
-import people.Player1;
-
+/**
+ * Text Based Adventure
+ * @author Jaron Huang
+ * 11/3/17
+*/
 public abstract class Room 
 {
 	public boolean explored;
@@ -38,5 +41,6 @@ public abstract class Room
 	}
 	
 	public abstract void print();
+
 	
 }

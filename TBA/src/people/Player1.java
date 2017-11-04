@@ -2,6 +2,11 @@ package people;
 
 import java.util.Scanner;
 
+/**
+ * Text Based Adventure
+ * @author Jaron Huang
+ * 11/3/17
+*/
 public class Player1 implements Person
 {
 	private int energy;

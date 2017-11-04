@@ -2,6 +2,11 @@ package game;
 import board.Board;
 import people.Player1;
 
+/**
+ * Text Based Adventure
+ * @author Jaron Huang
+ * 11/3/17
+*/
 public class Utilities 
 {
 	Player1 player1 = new Player1(Player1.getName());
