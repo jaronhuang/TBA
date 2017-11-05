@@ -40,7 +40,7 @@ public class alarmRoom extends Room
     }
 	
 	/**
-	 * Prints out alarmRoom 
+	 * Print function
 	 */
 	@Override
 	public void print() 

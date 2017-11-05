@@ -40,7 +40,7 @@ public class keyRoom extends Room
     }
 	
 	/**
-	 * Prints out keyRoom 
+	 * Prints function
 	 */
 	@Override
 	public void print() 

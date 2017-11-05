@@ -20,9 +20,13 @@ public class GameRunner
 	public static void main (String[] args)
     {
         Room[][] map = new Room[5][5];
-        for (int j = 0; j<map.length; j++)
+        for (int i = 0; i < map.length; i++)
         {
-        	Room[] row = map[j];
+        	Room[] row = map[i];
+			for(int j = 0; j < row.length; j++)
+			{
+				row[j] = new keyRoom(i, j);
+			}
         }
         
         Board escmap = new Board(map);
@@ -53,7 +57,6 @@ public class GameRunner
         while(gameOn)
         {
             escmap.printMap(player1);
-            
             int move = Player1.chooseMove();
             Utilities.movePlayer(player1, move);	
             
