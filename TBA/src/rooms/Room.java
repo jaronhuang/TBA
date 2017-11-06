@@ -8,10 +8,8 @@ package rooms;
 public abstract class Room 
 {
 	public boolean explored;
-	public boolean location;
 	private int x;
 	private int y;
-	private int index;
 	
 	/**
 	 * Room constructor
@@ -42,23 +40,7 @@ public abstract class Room
     {
     	return y;
     }
-	
-	/**
-	 * setIndex sets the local variable index to the x and y coordinates
-	 */
-	public void setIndex() 
-	{
-		this.index = getX() + getY();
-	}
-	
-	/**
-	 * getIndex gets the local variable index
-	 * @return local variable index
-	 */
-	public int getIndex() 
-	{
-		return index;
-	}
+
 	
 	/**
 	 * abstract class method

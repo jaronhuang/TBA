@@ -1,7 +1,6 @@
 package board;
 
 import people.Player1;
-import people.Person;
 import rooms.Room;
 
 /**
@@ -11,65 +10,58 @@ import rooms.Room;
 */
 public class Board 
 {
-	 private Room[][] escmap;
-	 private Player1 player;
-	 
-	 /**
+
+	private Room[][] escmap;
+	
+	/**
 	  * Board constructor 
 	  * @param Room[][] escmap 
 	  */
-	 public Board(Room[][] escmap)
-	 {
-		 this.escmap = escmap;
-	 }
-
-	 /**
+	public Board(Room[][] escmap)
+	{
+		this.escmap = escmap;
+	}
+	
+	/**
 	  * printMap Prints the board
 	  * @param player the constructed player of the game
 	  */
-	 public void printMap(Player1 player)
-	 {
-	    for (int i = 0; i < escmap.length; i++)
-	    {
-	    	for (int j = 0; j < escmap[i].length; j++)
-	    	{
-	    		if(i == player.getPositionX() && j == player.getPositionY())
-	    		{
-	    			System.out.print("[ P ]");
-	    		}
-	    		else
-	    		{
-	            	escmap[i][j].print();
-	    		}
-	    	}
-	    }
-	 }
-	 
-	 /**
+	public void printMap(Player1 player)
+	{
+		for(int i = 0; i < escmap.length; i++) 
+        {
+            for (int j = 0; j < escmap[i].length; j++)
+            {
+            	if(player.getPositionX() == i && player.getPositionY() == j)
+            	{
+            		System.out.print("[ P ]");
+            	}
+            	else
+            	{
+            		escmap[i][j].print(); 
+            	}
+            }
+            System.out.println();
+        }
+	}
+	
+	/**
 	  * getEscmap gets the local variable escmap
 	  * @return returns local variable escmap
 	  */
-	 public Room[][] getEscmap() 
-	 {
-		 return escmap;
-	 }
-	 
-	 /**
-	  * getPlayer gets the local variable player
-	  * @return returns local variable player
+	public Room[][] getEscmap() 
+	{
+        return escmap;
+	}
+	
+	/**
+	  * setMap sets the local variable escmap to parameter escmap
+	  * @return returns local variable escmap
 	  */
-	 public Player1 getPlayer() 
-	 {
-		 return player;
-	 }
-	 
-	 /**
-	  * setPlayer takes in parameter player and sets it to local variable player
-	  * @param player the constructed player of the game
-	  */
-	 public void setPlayer(Player1 player) 
-	 {
-		 this.player = player;
-	 }
-		
+	public void setMap(Room[][] escmap)
+	{
+		this.escmap = escmap;
+	}
 }
+	
+

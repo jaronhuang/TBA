@@ -9,7 +9,6 @@ import people.Player1;
 */
 public class Utilities 
 {
-	Player1 player1 = new Player1(Player1.getName());
 	
 	/**
 	 * movePlayer moves the player according to users move
@@ -18,33 +17,25 @@ public class Utilities
 	 */
 	public static void movePlayer(Player1 player1, int move) 
 	{
-		if (move == 2) //n
+		if(move == 2 && player1.getPositionY() > 0) //w
 		{
-			if (player1.getPositionY()  > 0) 
-			{
-				player1.setPosition(player1.getPositionX(), player1.getPositionY()-1);   
-			}
-		} 
-		else if (move == 1) //w
+			player1.setPositionY(player1.getPositionY() - 1);
+			System.out.println("You have " + player1.calcEnergy() + " energy left.");
+		}
+		if(move == -2 && player1.getPositionY() < 4) //e
 		{
-			if (player1.getPositionX() > 0) 
-			{
-				player1.setPosition(player1.getPositionX()-1, player1.getPositionY());
-			}
-		} 
-		else if (move == -2) //s
-		{		
-			if (player1.getPositionY() > 4)
-			{
-				player1.setPosition(player1.getPositionX(), player1.getPositionY()+1);    	
-			}
-		} 
-		else if (move == -1) //e
+			player1.setPositionY(player1.getPositionY() + 1);
+			System.out.println("You have " + player1.calcEnergy() + " energy left.");
+		}
+		if(move == 1 && player1.getPositionX() > 0) //n
 		{
-			if (player1.getPositionX() > 4) 
-			{
-				player1.setPosition(player1.getPositionX()+1, player1.getPositionY());
-			}
+			player1.setPositionX(player1.getPositionX() - 1);
+			System.out.println("You have " + player1.calcEnergy() + " energy left.");
+		}
+		if(move == -1 && player1.getPositionX() < 4) //s
+		{
+			player1.setPositionX(player1.getPositionX() + 1);
+			System.out.println("You have " + player1.calcEnergy() + " energy left.");
 		}
 	}
 }

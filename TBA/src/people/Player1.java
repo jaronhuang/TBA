@@ -2,28 +2,23 @@ package people;
 
 import java.util.Scanner;
 
-/**
- * Text Based Adventure
- * @author Jaron Huang
- * 11/3/17
-*/
 public class Player1 implements Person
-{
-	private int energy;
-	private static String name;
+{	
 	private int positionX;
 	private int positionY;
+	private int energy;
 	private int location;
 	public static int counter = 0;
 	
 	/** 
 	 * Player1 constructor
-	 * @param name - Takes in the name of the player.
+	 * @param positionX the x-position of the player
+	 * @param positionY the y-position of the player
 	 */
-	public Player1(String name)
+	public Player1(int positionX, int positionY)
 	{
-		this.name = name;
-		this.energy = getEnergy();	
+		this.positionX = positionX;
+		this.positionY = positionY;
 	}
 	
 	/**
@@ -39,19 +34,12 @@ public class Player1 implements Person
 	 * getEnergy gets the local variable energy
 	 * @return returns local variable energy
 	 */
-	public int getEnergy()
+	@Override
+	public int getEnergy() 
 	{
 		return energy;
 	}
-	
-	/**
-	 * getName gets the local variable name
-	 * @return returns local variable name
-	 */
-	public static String getName()
-	{
-		return name;
-	}
+
 	
 	/**
 	 * chooseMove asks the player where the player wants to go
@@ -81,21 +69,22 @@ public class Player1 implements Person
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Takes parameter positionX and sets it to local variable positionX
 	 * @param positionX the X-Position of the player
 	 */
-	public void setPositionX(int positionX) 
+	public void setPositionX(int positionX)
 	{
 		this.positionX = positionX;
+		
 	}
 	
 	/**
 	 * getPositionX gets the local variable positionX
 	 * @return local variable positionX
 	 */
-	public int getPositionX() 
+	public int getPositionX()
 	{
 		return positionX;
 	}
@@ -104,16 +93,17 @@ public class Player1 implements Person
 	 * Takes parameter positionY and sets it to local variable positionY
 	 * @param positionY the Y-Position of the player
 	 */
-	public void setPositionY(int positionY) 
+	public void setPositionY(int positionY)
 	{
 		this.positionY = positionY;
+		
 	}
 	
 	/**
 	 * getPositionY gets the local variable positionY
 	 * @return local variable positionY
 	 */
-	public int getPositionY() 
+	public int getPositionY()
 	{
 		return positionY;
 	}
@@ -135,6 +125,7 @@ public class Player1 implements Person
 	 * getLocation gets the local variable location
 	 * @return local variable location 
 	 */
+	@Override
 	public int getLocation() 
 	{
 		return location;
