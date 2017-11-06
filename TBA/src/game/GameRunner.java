@@ -78,7 +78,7 @@ public class GameRunner
             	gameOn = false;
             	if (alarmRoom.silenced && keyRoom.found)
             	{
-            		System.out.println("Congrats! You're free, but now on FBI's most wanted list.");
+            		System.out.println("Congrats " + pName + "! " + "You're free, but you're on FBI's most wanted list now.");
             	}
             	else if(!alarmRoom.silenced && keyRoom.found)
             	{
